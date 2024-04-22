@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>I Went Cat-Watching Today.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="embed-iframe"></div>
+    <script src="<https://open.spotify.com/embed/iframe-api/v1>" async></script>
+    <script type="text/javascript">
+      window.onSpotifyIframeApiReady = (IFrameAPI) => {
+        const element = document.getElementById('embed-iframe');
+        const options = {
+          width: '100%',
+          height: '380',
+          uri: 'spotify:playlist:55E1FSoV5Yy4iaxT00Qmsm'
+        };
+        IFrameAPI.createController(element, options);
+      };
+    </script>
+  </body>
+</html>
